@@ -18,11 +18,6 @@ class Canvas extends React.Component {
         };
     }
 
-    exportMeme(event) {
-        event.target.href = this.refs.canvas.toDataURL('image/png').replace('image/png', "image/octet-stream");
-        event.target.download = `${this.props.top} ${this.props.bottom}`;
-    };
-
     resizeCanvas() {
         this.refs.canvas.width = this.refs.canvas.offsetWidth;
         this.refs.canvas.height = this.refs.canvas.offsetHeight;
@@ -30,28 +25,61 @@ class Canvas extends React.Component {
         this.ctx.textAlign = "center";
     }
 
+    exportMeme(event) {
+        const image = this.refs.image;
+
+        const newCanvas = document.createElement('canvas');
+        newCanvas.width = this.scale * image.width;
+        newCanvas.height = this.scale * image.height;
+
+        // crop the white straps on the sides
+        newCanvas
+            .getContext('2d')
+            .drawImage(
+                this.refs.canvas,
+                this.getImagePosition(),
+                0,
+                newCanvas.width,
+                newCanvas.height,
+                0,
+                0,
+                newCanvas.width,
+                newCanvas.height);
+
+        event.target.href = newCanvas.toDataURL('image/png');
+        event.target.download = `${this.props.top} ${this.props.bottom}`;
+    };
+
+
     redraw() {
         this.scaleToFit();
         this.ctx.fillStyle = this.props.color;
         this.ctx.fillText(this.props.top, this.refs.canvas.width / 2, 75, this.refs.canvas.width * 0.9);
         this.ctx.fillText(this.props.bottom, this.refs.canvas.width / 2, this.scale * this.refs.image.height - 75, this.refs.canvas.width * 0.9);
+    }
 
+    setScale() {
+        const image = this.refs.image;
+        const canvas = this.refs.canvas;
+
+        this.scale = Math.min(canvas.width / image.width, canvas.height / image.height)
+    }
+
+    getImagePosition() {
+        return (this.refs.canvas.width / 2) - (this.refs.image.width / 2) * this.scale
     }
 
     scaleToFit() {
         const image = this.refs.image;
         const canvas = this.refs.canvas;
-        // get the scale
-        this.scale = Math.min(canvas.width / image.width, canvas.height / image.height);
-        // get the top left position of the image
-        const x = (canvas.width / 2) - (image.width / 2) * this.scale;
-        const y = (canvas.height / 2) - (image.height / 2) * this.scale;
+
+        this.setScale();
 
         // fix Mozilla bug - images on top of each other
-        this.ctx.fillStyle = "#fff";
+        this.ctx.fillStyle = "#ffffff";
         this.ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        this.ctx.drawImage(image, x, 0, image.width * this.scale, image.height * this.scale);
+        this.ctx.drawImage(image, this.getImagePosition(), 0, image.width * this.scale, image.height * this.scale);
     }
 
 

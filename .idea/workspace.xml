@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MemeGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/MemeGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +55,7 @@
       <workItem from="1567167192961" duration="4956000" />
       <workItem from="1567405896131" duration="12000" />
       <workItem from="1567496577465" duration="5973000" />
-      <workItem from="1567505730057" duration="5996000" />
+      <workItem from="1567505730057" duration="8904000" />
     </task>
     <servers />
   </component>

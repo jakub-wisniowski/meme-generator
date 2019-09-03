@@ -9,7 +9,7 @@ class MemeGenerator extends Component {
             bottomText: "",
             randomImg: "http://i.imgflip.com/1bij.jpg",
             allMemeImgs: [],
-            color: "#ffffff"
+            color: "#fff"
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
