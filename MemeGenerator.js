@@ -11,8 +11,8 @@ class MemeGenerator extends Component {
             allMemeImgs: [],
             color: "#ffffff"
         };
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
     componentDidMount() {
@@ -62,9 +62,8 @@ class MemeGenerator extends Component {
                             <input type="color" name="color" value={this.state.color} onChange={this.handleChange} />
                             <span>Text color</span>
                         </label>
-                        <button>Gen</button>
+                        <button>New template</button>
                     </div>
-
                 </form>
                 <Canvas
                     image={this.state.randomImg}

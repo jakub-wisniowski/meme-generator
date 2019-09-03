@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a2f43a06-99fa-406a-82a7-82fd2a119835" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemeGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/MemeGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +20,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/react/tic-tac-toe" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -52,7 +55,8 @@
       <workItem from="1567146884429" duration="14000" />
       <workItem from="1567167192961" duration="4956000" />
       <workItem from="1567405896131" duration="12000" />
-      <workItem from="1567496577465" duration="5638000" />
+      <workItem from="1567496577465" duration="5973000" />
+      <workItem from="1567505730057" duration="5996000" />
     </task>
     <servers />
   </component>
@@ -64,7 +68,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
